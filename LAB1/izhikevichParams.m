@@ -5,7 +5,7 @@
 %% AUTHOR: IRENE PISANI
 % email: i.pisani1@studenti.unipi.it
 % matricola: 560104
-% date: August 23
+% date: September 23
 
 %% COMPUTATIONAL NEUROSCIENCE 22/23 - LABORATORY 1
 
@@ -351,9 +351,6 @@ for t = params.R.tauSpan
     end
     i = i +1;
 end
-
-
-% (!!! add condition in model)
 
 params.S.title = ["(S)  Inhibition Induced Spiking", "S_inhibition_induced_spiking"];
 params.S.abcd = [-0.02, -1, -60, 8];

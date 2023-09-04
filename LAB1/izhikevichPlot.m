@@ -5,7 +5,7 @@
 %% AUTHOR: IRENE PISANI
 % email: i.pisani1@studenti.unipi.it
 % matricola: 560104
-% date: August 23
+% date: September 23
 
 %% COMPUTATIONAL NEUROSCIENCE 22/23 - LABORATORY 1
 
@@ -47,22 +47,18 @@
 
 function izhikevichPlot(params, vHistory, uHistory)
 
-% 1° sub-plot: membrane potential time course 
-subplot(2,2,1) 
+% 1° plot: membrane potential time course 
 plot(params.tauSpan, vHistory);
 xlabel("Time (t)")
 ylabel("Membrane potential (u)")
-title("Membrane potential time course")
+sgtitle(params.title(1)+': Membrane Potential time course')
+saveas(gcf, 'Results/MembranePotential/'+params.title(2), 'jpg')
 
-% 2° sub-plot: phase portraits
-subplot(2,2,2) 
+% 2° plot: phase portraits
 plot(vHistory,uHistory);
 xlabel("Membrane potential (u)")
 ylabel("Recovery variable (v)")
-title("Phase portrait")
-
-% set image title and save figure
-sgtitle(params.title(1))
-saveas(gcf, 'images/'+params.title(2))
+sgtitle(params.title(1)+': Phase Portrait')
+saveas(gcf, 'Results/PhasePortrait/'+params.title(2), 'jpg')
 
 end
