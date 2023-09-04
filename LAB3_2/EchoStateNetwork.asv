@@ -27,6 +27,28 @@
 
 %% Class for implementing, training and evaluate ESN model
 
+% EchoStateNetwork()
+    
+    % PARAMETERS
+        % trX : Training input features 
+        % trY : Training targets
+        % vlX : Validation input features
+        % vlY : Validation targets
+        % numTrials : (int) Num. of hyperparameter configuration to try
+    
+    % DESCRIPTION
+        % Use this function to execute RNN model selection with Random
+        % Search over hyper-parameter space. The best hyper-parameter
+        % config allow to reach the lowest VL error.
+     
+    % OUTPUT 
+        % optParams : (struct) Optimal configuration of hyper-parameters
+        % found during model selectopn
+        % optVL : (float) VL error achieved with optimal hyper-parameters
+        % optTR : (floar) TR error achieved with optimal hyper-parameters
+
+% -------------------------------------------------------------------------
+
 classdef EchoStateNetwork
 
     properties
@@ -154,7 +176,7 @@ classdef EchoStateNetwork
        
         end
         
-        %% Function for make prediction with ESN
+        %% Function for make prediction
         
         % PARAMETERS: 
             % X : input 
@@ -165,7 +187,7 @@ classdef EchoStateNetwork
 
         % OUTPUT: 
             % preds : ESN predicitions
-            % Sh : ESN state
+            % Sh : ESN s
 
         function [preds, Sh] = predict (obj, X, initState)
             
@@ -174,22 +196,8 @@ classdef EchoStateNetwork
 
             Sh = Sh(1:obj.Nh, end);
         end
-        
-        %% Function for evaluate ESN
-        
-        % PARAMETERS: 
-            % X : input 
-            % Y : target
-            % InitState : could be nan for setting zero initial state 
-        
-        % DESCRIPTION:
-        % Evaluate ESN performance with MSE metric
 
-        % OUTPUT: 
-            % err : MSE beween pedictions and target
-            % preds : ESN's predictions
-
-        function [err, preds, Sh] = evaluate(obj, X, Y, initState)
+        function [err, Sh] = evaluate(obj, X, Y, initState)
 
             [preds, Sh] = obj.predict(X, initState);
             

@@ -79,16 +79,10 @@ performance
 % Save optimal hyper-parameters configurations
 save(fullfile('Results', 'ESN-optimal-hyperparam.mat'), 'bestParam')
 
-% Save  ESN weights and bias
-inputW = esn.Wx;
-reservoirW = esn.Wh;
-outputW = esn.Wo;
-bias = esn.b;
-
-save(fullfile('Results', 'ESN-weightInput.mat'), 'inputW')
-save(fullfile('Results', 'ESN-weightReservoir.mat'), 'reservoirW')
-save(fullfile('Results', 'ESN-weightOutput.mat'), 'outputW')
-save(fullfile('Results', 'ESN-bias.mat'), 'bias')
+save(fullfile('Results', 'ESN-W.mat'), 'bestParam')
+save(fullfile('Results', 'ESN-optimal-hyperparam.mat'), 'bestParam')
+save(fullfile('Results', 'ESN-optimal-hyperparam.mat'), 'bestParam')
+save(fullfile('Results', 'ESN-optimal-hyperparam.mat'), 'bestParam')
 
 % save training, validation, development (tr + vl) and test Mean Squared Error
 save(fullfile('Results', 'ESN-mse.mat'), 'performance')
