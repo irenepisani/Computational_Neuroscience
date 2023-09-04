@@ -5,7 +5,7 @@
 %% AUTHOR: IRENE PISANI
 % email: i.pisani1@studenti.unipi.it
 % matricola: 560104
-% date: August 23
+% date: September 23
 
 %% COMPUTATIONAL NEUROSCIENCE 22/23 - LABORATORY 2.2
 

@@ -5,7 +5,7 @@
 %% AUTHOR: IRENE PISANI
 % email: i.pisani1@studenti.unipi.it
 % matricola: 560104
-% date: August 23
+% date: September 23
 
 %% COMPUTATIONAL NEUROSCIENCE 22/23 - LABORATORY 2.2
 
@@ -89,10 +89,10 @@ hopfieldPlot(hist, ener, over, P1, "1_1");
 hopfieldPlot(hist, ener, over, P1, "1_2");
 
 [ener, over, hist] = network.Retrieval([P0, P1, P2], perturbedP20, epochs);
-hopfieldPlot(hist, ener, over, P0, "2_0");
+hopfieldPlot(hist, ener, over, P2, "2_0");
 
 [ener, over, hist] = network.Retrieval([P0, P1, P2], perturbedP21, epochs);
-hopfieldPlot(hist, ener, over, P0, "2_1");
+hopfieldPlot(hist, ener, over, P2, "2_1");
 
 [ener, over, hist] = network.Retrieval([P0, P1, P2], perturbedP22, epochs);
-hopfieldPlot(hist, ener, over, P0, "2_2");
+hopfieldPlot(hist, ener, over, P2, "2_2");

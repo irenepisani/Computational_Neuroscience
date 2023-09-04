@@ -6,7 +6,7 @@
 %% AUTHOR: IRENE PISANI
 % email: i.pisani1@studenti.unipi.it
 % matricola: 560104
-% date: August 23
+% date: September 23
 
 %% COMPUTATIONAL NEUROSCIENCE 22/23 - LABORATORY 2.2
 
@@ -61,7 +61,7 @@ plot(energy);
 title("Energy function over time ");
 xlabel("Time")
 ylabel("Energy function value")
-saveas(gcf, 'images/distorted_' + imgTitle + '_energy')
+saveas(gcf, 'Results/distorted_' + imgTitle + '_energy', 'jpg')
 
 %%%%%%% 2° Plot 
 
@@ -71,7 +71,7 @@ xlabel("Time")
 ylabel("Overlap function value")
 title("Overlaps function over time");
 legend("Pattern 0", "Pattern 1", "Pattern 2");
-saveas(gcf, 'images/distorted_' + imgTitle + '_overlap')
+saveas(gcf, 'Results/distorted_' + imgTitle + '_overlap', 'jpg')
 
 %%%%%%% 3° Plot 
 
@@ -79,8 +79,9 @@ saveas(gcf, 'images/distorted_' + imgTitle + '_overlap')
 imagesc(reshape(history(:, end), 32, 32));
 % Measure of discrepancy: Mean Squared Error with the optimal corresponding
 % memory vector
-mse = ( sum(optVector - history(:, end))^2 ) / 1024;
+%mse = ( sum(optVector - history(:, end))^2 ) / 1024;
+mse = immse(optVector, history(:, end));
 title("Image reconstruction - MSE  = " + mse);
-saveas(gcf, "images/distorted_" + imgTitle + "_reconstructed")
+saveas(gcf, "Results/distorted_" + imgTitle + "_reconstructed", 'jpg')
 
 end
