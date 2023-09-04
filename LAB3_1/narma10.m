@@ -54,7 +54,7 @@
 function [trainData, trainTargets, validData, validTargets, testData, testTargets] = narma10()
 
 % Load Narma10 dataset in csv format as matrix
-datasetNarma10 = readmatrix(fullfile("Dataset", "NARMA10.csv"));
+datasetNarma10 = readmatrix("NARMA10.csv");
 
 % Get feature and target
 data = datasetNarma10(1, :);

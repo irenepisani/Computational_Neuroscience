@@ -58,7 +58,7 @@
 function [predTR, errTR, predEV, errEV, rnn, records] = rnn(params, trainX, trainY, evalX, evalY)
 
 % RNN  initialization 
-rnn = timedelaynet(params.layerDelay, params.hiddenSize, params.trFunc);
+rnn = layrecnet(params.layerDelay, params.hiddenSize, params.trFunc);
 
 rnn.trainFcn = params.trFunc;                  % Optimizer 
 rnn.trainParam.lr = params.lr;                 % Learning rate

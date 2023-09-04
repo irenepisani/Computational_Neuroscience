@@ -35,7 +35,7 @@
 
 % Define num. of configuration of hyper-parameters values to try in Random
 % Grid Search
-numTrials = 10;
+numTrials = 20;
 
 % Run Model selection with Randomized Grid Search to obtain the optimal
 % configuration of hyper-parameters values and the VL and TR error obtained

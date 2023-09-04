@@ -70,4 +70,4 @@ save(fullfile('Results', 'TDNN-optimal-hyperparam.mat'), 'bestParams')
 save(fullfile('Results', 'TDNN-mse.mat'), 'performance')
 
 % Generate and save plots 
-snarma10Plot("TDNN", records, predDEV, devY, predTS, tsY)
+narma10Plot("TDNN", records, predDEV, devY, predTS, tsY)

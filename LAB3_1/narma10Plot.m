@@ -59,7 +59,7 @@ plot(modelRecords.perf)
 title(model+" learning curve on development set (TR + VL)")
 xlabel("Epochs")
 ylabel("MSE")
-saveas(plot1, fullfile("Results", model+"-TR-learning-curve.fig"))
+saveas(plot1, fullfile("Results", model+"-TR-learning-curve"), 'jpg')
 
 %%%%% 2° plot : TR target signal vs TR output signal
 
@@ -72,7 +72,7 @@ title(model + " Development set: output signal vs. target signal")
 legend("Output", "Targets")
 xlabel("Time steps")
 ylabel("Time serie value")
-saveas(plot2,  fullfile("Results", model+"-TR-target-output.fig"))
+saveas(plot2,  fullfile("Results", model+"-TR-target-output"), 'jpg')
 
 %%%%% 3° plot : TS target signal vs TS output signal
 plot3 = figure;
@@ -84,7 +84,7 @@ title(model + " Test set: output signal vs. target signal")
 legend("Output", "Targets")
 xlabel("Time steps")
 ylabel("Time serie value")
-saveas(plot3, fullfile("Results", model+"-TS-target-output.fig"))
+saveas(plot3, fullfile("Results", model+"-TS-target-output"), 'jpg')
 
 end
 
