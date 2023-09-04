@@ -5,7 +5,7 @@
 %% AUTHOR: IRENE PISANI
 % email: i.pisani1@studenti.unipi.it
 % matricola: 560104
-% date: August 23
+% date: September 23
 
 %% COMPUTATIONAL NEUROSCIENCE 22/23 - LABORATORY 2.1 
 
@@ -76,11 +76,11 @@ hold on
 plotv(maxEigenVector,'--r')
 
 legend('Input data points', 'Final weight vector', 'Maximum Eigen Vector');
-title("Data points, final weights and prinpical eigen vector " + rule);
+title("Data points, final weights and prinpical eigen vector");
 hold off
 
 sgtitle("Learning with "+rule+" rule")
-saveas(gcf, 'images/P1'+rule)
+saveas(gcf, 'Results/P1'+rule, 'jpg')
 
 %%%%%% P2. Plot some figure regarding weights evolution
 
@@ -107,6 +107,6 @@ title("Evolution of weight's norm over time");
 
 % set image title and save figure
 sgtitle("Learning with "+rule+" rule")
-saveas(gcf, 'images/P2'+rule)
+saveas(gcf, 'Results/P2'+rule, 'jpg')
 
 end

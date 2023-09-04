@@ -3,8 +3,9 @@
 % M.Sc. Computer Science, Artificial Intelligence
 
 %% AUTHOR: IRENE PISANI
-% email: i.pisani1@studenti.unipi.it matricola: 560104
-% date: August 23
+% email: i.pisani1@studenti.unipi.it 
+% matricola: 560104
+% date: September 2023
 
 %% COMPUTATIONAL NEUROSCIENCE 22/23 - LABORATORY 2.1
 

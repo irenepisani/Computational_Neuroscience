@@ -5,7 +5,7 @@
 %% AUTHOR: IRENE PISANI
 % email: i.pisani1@studenti.unipi.it
 % matricola: 560104
-% date: August 23
+% date: September 23
 
 %% COMPUTATIONAL NEUROSCIENCE 22/23 - LABORATORY 2.1
 
@@ -53,7 +53,7 @@ params.alphaOja = 0.001;
 [weight, weightHistory] = hebbianLearningModel(dataset, params, "hebb");
 
 % save matrix of weight vector evolution after each update
-save('weightHistory_Hebb.mat', "weightHistory");
+save('Results/weightHistory_Hebb.mat', "weightHistory");
 
 % generate the required figure
 hebbianLearningPlot(dataset, weight, weightHistory, "hebb");
@@ -64,7 +64,7 @@ hebbianLearningPlot(dataset, weight, weightHistory, "hebb");
 [weight, weightHistory] = hebbianLearningModel(dataset, params, "oja");
 
 % save matrix of weight vector evolution after each update
-save('weightHistory_Oja.mat',"weightHistory");
+save('Results/weightHistory_Oja.mat',"weightHistory");
 
 % generate the required figure
 hebbianLearningPlot(dataset, weight, weightHistory, "oja");
@@ -75,7 +75,7 @@ hebbianLearningPlot(dataset, weight, weightHistory, "oja");
 [weight, weightHistory] = hebbianLearningModel(dataset, params, "sub");
 
 % save matrix of weight vector evolution after each update
-save('weightHistory_SubNorm.mat',"weightHistory");
+save('Results/weightHistory_SubNorm.mat',"weightHistory");
 
 % generate the required figure
 hebbianLearningPlot(dataset, weight, weightHistory, "sub");
